@@ -43,9 +43,14 @@ func main() {
 	// i := Search_Insertion(s, e, arr)
 	// fmt.Printf("The element %d fits in the index: %d\n", e, i)
 
-	fmt.Print("Enter an element to find it's floor and ceil val: ")
+	// fmt.Print("Enter an element to find it's floor and ceil val: ")
+	// var e int
+	// fmt.Scan(&e)
+	// fmt.Printf("The floor val for %d is: %d.\n", e, floor(s, e, arr))
+	// fmt.Printf("The ceil val for %d is: %d.", e, ceil(s, e, arr))
+
+	fmt.Print("Enter an element to find it's index in rotated arr: ")
 	var e int
 	fmt.Scan(&e)
-	fmt.Printf("The floor val for %d is: %d.\n", e, floor(s, e, arr))
-	fmt.Printf("The ceil val for %d is: %d.", e, ceil(s, e, arr))
+	fmt.Printf("The element's %d index is: %d\n", e, search_rotated_1(s, e, arr))
 }

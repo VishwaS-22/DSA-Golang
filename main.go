@@ -3,14 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Print("Enter the size of the array: ")
-	var s int
-	fmt.Scan(&s)
-	fmt.Print("Enter the values for an array: ")
-	arr := make([]int, s)
-	for v := range arr {
-		fmt.Scan(&arr[v])
-	}
+	// fmt.Print("Enter the size of the array: ")
+	// var s int
+	// fmt.Scan(&s)
+	// fmt.Print("Enter the values for an array: ")
+	// arr := make([]int, s)
+	// for v := range arr {
+	// 	fmt.Scan(&arr[v])
+	// }
 
 	// fmt.Print("Enter a target to search in the arr space: ")
 	// var t int
@@ -49,8 +49,12 @@ func main() {
 	// fmt.Printf("The floor val for %d is: %d.\n", e, floor(s, e, arr))
 	// fmt.Printf("The ceil val for %d is: %d.", e, ceil(s, e, arr))
 
-	fmt.Print("Enter an element to find it's index in rotated arr: ")
-	var e int
-	fmt.Scan(&e)
-	fmt.Printf("The element's %d index is: %d\n", e, search_rotated_1(s, e, arr))
+	// fmt.Print("Enter an element to find it's index in rotated arr: ")
+	// var e int
+	// fmt.Scan(&e)
+	// fmt.Printf("The element's %d index is: %d\n", e, search_rotated_1(s, e, arr))
+	fmt.Print("Enter a value to find it's Square root: ")
+	var n int
+	fmt.Scan(&n)
+	fmt.Printf("The square root of val %d is: %d\n", n, Square_root(n))
 }

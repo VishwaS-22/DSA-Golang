@@ -17,7 +17,9 @@ func main() {
 	var k int
 	fmt.Scan(&k)
 
-	fmt.Println("Max sub array sum with k length by Considering repeated vals.:")
-	sol := maxSubarrsum(arr, k)
-	fmt.Print("The ans is: ", sol)
+	// sol := maxSubarrsum(arr, k)
+	// fmt.Print("The ans is: ", sol)
+
+	sol1 := maxSubarrCondition(arr, k)
+	fmt.Print("The ans is: ", sol1)
 }

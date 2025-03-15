@@ -1,7 +1,7 @@
 package main
 
 func isAlphaNumeric(ch byte) bool {
-	return (ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch >= 'b') || (ch >= '0' && ch <= '9')
+	return (ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z') || (ch >= '0' && ch <= '9')
 }
 
 func toLower(ch byte) byte {

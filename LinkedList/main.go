@@ -32,13 +32,22 @@ func main() {
 	// fmt.Println("After Insertion:")
 	// printList(first)
 
-	fmt.Println("Before Deletion:")
-	printList(first)
+	// fmt.Println("Before Deletion:")
+	// printList(first)
 
-	deletion(first)
+	// deletion(first)
 
-	fmt.Println("After Deletion:")
-	printList(first)
+	// fmt.Println("After Deletion:")
+	// printList(first)
+
+	t := 2
+	found := search(first, t)
+
+	if found {
+		fmt.Printf("The val %d is found in the List.", t)
+	} else {
+		fmt.Printf("The val %d is not found in the List.", t)
+	}
 }
 
 func printList(head *ListNode) {

@@ -40,14 +40,22 @@ func main() {
 	// fmt.Println("After Deletion:")
 	// printList(first)
 
-	t := 2
-	found := search(first, t)
+	// t := 2
+	// found := search(first, t)
 
-	if found {
-		fmt.Printf("The val %d is found in the List.", t)
-	} else {
-		fmt.Printf("The val %d is not found in the List.", t)
-	}
+	// if found {
+	// 	fmt.Printf("The val %d is found in the List.", t)
+	// } else {
+	// 	fmt.Printf("The val %d is not found in the List.", t)
+	// }
+
+	fmt.Println("Before Reversing:")
+	printList(first)
+
+	newHead := reverseList(first)
+
+	fmt.Println("After Reversing:")
+	printList(newHead)
 }
 
 func printList(head *ListNode) {

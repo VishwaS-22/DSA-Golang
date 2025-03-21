@@ -24,11 +24,28 @@ func main() {
 	// 	fmt.Println(curr.val)
 	// 	curr = curr.next
 	// }
-	fmt.Println("Before Insertion:")
+	// fmt.Println("Before Insertion:")
+	// printList(first)
+
+	// insertion(first, 99)
+
+	// fmt.Println("After Insertion:")
+	// printList(first)
+
+	fmt.Println("Before Deletion:")
 	printList(first)
 
-	insertion(first, 99)
+	deletion(first)
 
-	fmt.Println("After Insertion:")
+	fmt.Println("After Deletion:")
 	printList(first)
+}
+
+func printList(head *ListNode) {
+	curr := head
+	for curr != nil {
+		fmt.Printf("%d -> ", curr.val)
+		curr = curr.next
+	}
+	fmt.Println("nil")
 }

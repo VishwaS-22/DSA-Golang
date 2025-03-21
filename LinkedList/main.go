@@ -17,12 +17,18 @@ func main() {
 	first.next = second
 	second.next = third
 
-	//Traverse
-	curr := first
-	fmt.Println("Printing the LinkedList")
-	for curr != nil {
-		fmt.Println(curr.val)
-		curr = curr.next
-	}
+	// //Traverse
+	// curr := first
+	// fmt.Println("Printing the LinkedList")
+	// for curr != nil {
+	// 	fmt.Println(curr.val)
+	// 	curr = curr.next
+	// }
+	fmt.Println("Before Insertion:")
+	printList(first)
 
+	insertion(first, 99)
+
+	fmt.Println("After Insertion:")
+	printList(first)
 }

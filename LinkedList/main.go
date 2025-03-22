@@ -49,13 +49,21 @@ func main() {
 	// 	fmt.Printf("The val %d is not found in the List.", t)
 	// }
 
-	fmt.Println("Before Reversing:")
-	printList(first)
+	// fmt.Println("Before Reversing:")
+	// printList(first)
 
-	newHead := reverseList(first)
+	// newHead := reverseList(first)
 
-	fmt.Println("After Reversing:")
-	printList(newHead)
+	// fmt.Println("After Reversing:")
+	// printList(newHead)
+
+	third.next = first
+
+	if cycle(first) {
+		fmt.Println("Cycle Detected.")
+	}else{
+		fmt.Println("Not a Cycle.")
+	}
 }
 
 func printList(head *ListNode) {

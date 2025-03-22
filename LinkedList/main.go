@@ -4,6 +4,7 @@ import "fmt"
 
 type ListNode struct {
 	val  int
+	prev *ListNode
 	next *ListNode
 }
 
@@ -57,13 +58,29 @@ func main() {
 	// fmt.Println("After Reversing:")
 	// printList(newHead)
 
-	third.next = first
+	// Cycle Detection
+	// third.next = first
 
-	if cycle(first) {
-		fmt.Println("Cycle Detected.")
-	}else{
-		fmt.Println("Not a Cycle.")
+	// if cycle(first) {
+	// 	fmt.Println("Cycle Detected.")
+	// }else{
+	// 	fmt.Println("Not a Cycle.")
+	// }
+
+	//Doubly LinkedList
+
+	second.prev = first
+	third.prev = second
+	fmt.Println("Forward Traversal:")
+	printList(first)
+	fmt.Println("Backward Traversal:")
+
+	curr := third
+	for curr != nil {
+		fmt.Printf("%d -> ", curr.val)
+		curr = curr.prev
 	}
+	fmt.Println("nil")
 }
 
 func printList(head *ListNode) {

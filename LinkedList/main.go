@@ -4,19 +4,24 @@ import "fmt"
 
 type ListNode struct {
 	val  int
-	prev *ListNode
 	next *ListNode
+}
+
+type DListNode struct {
+	val  int
+	prev *DListNode
+	next *DListNode
 }
 
 func main() {
 	//Creating three nodes
-	first := &ListNode{val: 1}
-	second := &ListNode{val: 2}
-	third := &ListNode{val: 3}
+	// first := &ListNode{val: 1}
+	// second := &ListNode{val: 2}
+	// third := &ListNode{val: 3}
 
-	//Connecting all
-	first.next = second
-	second.next = third
+	// //Connecting all
+	// first.next = second
+	// second.next = third
 
 	// //Traverse
 	// curr := first
@@ -69,21 +74,61 @@ func main() {
 
 	//Doubly LinkedList
 
-	second.prev = first
-	third.prev = second
-	fmt.Println("Forward Traversal:")
-	printList(first)
-	fmt.Println("Backward Traversal:")
+	// second.prev = first
+	// third.prev = second
+	// fmt.Println("Forward Traversal:")
+	// printList(first)
+	// fmt.Println("Backward Traversal:")
 
-	curr := third
+	// curr := third
+	// for curr != nil {
+	// 	fmt.Printf("%d -> ", curr.val)
+	// 	curr = curr.prev
+	// }
+	// fmt.Println("nil")
+
+	//Doubly LinkedList
+	//Creating three nodes
+	first := &DListNode{val: 1}
+	second := &DListNode{val: 2}
+	third := &DListNode{val: 3}
+
+	//Connecting all
+	first.next = second
+	second.prev = first
+	second.next = third
+	third.prev = second
+
+	fmt.Println("Original List:")
+	printDList(first)
+
+	insert_dll(first, 90)
+	fmt.Println("After inserting:")
+	printDList(first)
+
+	fmt.Println("Before deleting:")
+	printDList(first)
+
+	fmt.Println("After deleting:")
+	delete_dll(&first, first)
+	printDList(first)
+
+	newHead := reverseList_dll(first)
+
+	fmt.Println("Reversed list:")
+	printDList(newHead)
+}
+
+func printList(head *ListNode) {
+	curr := head
 	for curr != nil {
 		fmt.Printf("%d -> ", curr.val)
-		curr = curr.prev
+		curr = curr.next
 	}
 	fmt.Println("nil")
 }
 
-func printList(head *ListNode) {
+func printDList(head *DListNode) {
 	curr := head
 	for curr != nil {
 		fmt.Printf("%d -> ", curr.val)

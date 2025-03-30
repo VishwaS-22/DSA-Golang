@@ -89,50 +89,37 @@ func main() {
 
 	//Doubly LinkedList
 	//Creating three nodes
-	first := &DListNode{val: 1}
-	second := &DListNode{val: 2}
-	third := &DListNode{val: 3}
+	// first := &DListNode{val: 1}
+	// second := &DListNode{val: 2}
+	// third := &DListNode{val: 3}
 
-	//Connecting all
-	first.next = second
-	second.prev = first
-	second.next = third
-	third.prev = second
+	// //Connecting all
+	// first.next = second
+	// second.prev = first
+	// second.next = third
+	// third.prev = second
 
-	fmt.Println("Original List:")
-	printDList(first)
+	// fmt.Println("Original List:")
+	// printDList(first)
 
-	insert_dll(first, 90)
-	fmt.Println("After inserting:")
-	printDList(first)
+	// insert_dll(first, 90)
+	// fmt.Println("After inserting:")
+	// printDList(first)
 
-	fmt.Println("Before deleting:")
-	printDList(first)
+	// fmt.Println("Before deleting:")
+	// printDList(first)
 
-	fmt.Println("After deleting:")
-	delete_dll(&first, first)
-	printDList(first)
+	// fmt.Println("After deleting:")
+	// delete_dll(&first, first)
+	// printDList(first)
 
-	newHead := reverseList_dll(first)
+	// newHead := reverseList_dll(first)
 
-	fmt.Println("Reversed list:")
-	printDList(newHead)
-}
-
-func printList(head *ListNode) {
-	curr := head
-	for curr != nil {
-		fmt.Printf("%d -> ", curr.val)
-		curr = curr.next
-	}
-	fmt.Println("nil")
-}
-
-func printDList(head *DListNode) {
-	curr := head
-	for curr != nil {
-		fmt.Printf("%d -> ", curr.val)
-		curr = curr.next
-	}
-	fmt.Println("nil")
+	// fmt.Println("Reversed list:")
+	// printDList(newHead)
+    
+	list := createLinkedList([]int{1,2,3,4,5})
+	mid := findMiddle(list)
+	fmt.Println("Middle node is:")
+	printList(mid)
 }

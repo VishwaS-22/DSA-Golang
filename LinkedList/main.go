@@ -117,9 +117,25 @@ func main() {
 
 	// fmt.Println("Reversed list:")
 	// printDList(newHead)
-    
-	list := createLinkedList([]int{1,2,3,4,5})
-	mid := findMiddle(list)
-	fmt.Println("Middle node is:")
-	printList(mid)
+
+	// list := createLinkedList([]int{1,2,3,4,5})
+	// mid := findMiddle(list)
+	// fmt.Println("Middle node is:")
+	// printList(mid)
+
+	// //Happy Num or Not
+	// fmt.Println("Enter a num to check: ")
+	// var n int
+	// fmt.Scan(&n)
+	// if isHappy(n) {
+	// 	fmt.Println("It's a Happy Num.")
+	// }else{
+	// 	fmt.Println("It's not a Happy Num.")
+	// }
+
+	//Fine duplicate num
+	fmt.Println("Enter a list of elements:")
+	arr := []int{1, 3, 4, 2, 2}
+	res := findDuplicate(arr)
+	fmt.Printf("The duplicate num is:%v", res)
 }

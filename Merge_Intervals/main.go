@@ -5,12 +5,22 @@ import (
 )
 
 func main() {
-	arr := [][]int{{1, 3}, {8, 10}, {2, 6}, {15, 18}}
-	ans := mergeOverlapInt(arr)
+	//arr := [][]int{{1, 3}, {8, 10}, {2, 6}, {15, 18}}
+	// ans := mergeOverlapInt(arr)
 
-	fmt.Println("The merged intervals are:")
+	// fmt.Println("The merged intervals are:")
 
-	for _, v := range ans {
+	// for _, v := range ans {
+	// 	fmt.Printf("[%d, %d]", v[0], v[1])
+	// }
+	// fmt.Println()
+
+	// Insert Interval
+	arr := [][]int{{1,3},{4,5}}
+	new_arr := []int{2,3}
+	merged_ans := insertInt(arr, new_arr)
+	fmt.Println("The merged intervals after inserting are:")
+	for _, v := range merged_ans {
 		fmt.Printf("[%d, %d]", v[0], v[1])
 	}
 	fmt.Println()
@@ -33,4 +43,12 @@ func max(a, b int) int {
 		return a
 	}
 	return b
+}
+
+func min(a, b int) int {
+	if a < b {
+		return a
+	} else {
+		return b
+	}
 }

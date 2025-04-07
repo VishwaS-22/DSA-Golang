@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
 	//arr := [][]int{{1, 3}, {8, 10}, {2, 6}, {15, 18}}
@@ -15,15 +13,20 @@ func main() {
 	// }
 	// fmt.Println()
 
-	// Insert Interval
-	arr := [][]int{{1,3},{4,5}}
-	new_arr := []int{2,3}
-	merged_ans := insertInt(arr, new_arr)
-	fmt.Println("The merged intervals after inserting are:")
-	for _, v := range merged_ans {
-		fmt.Printf("[%d, %d]", v[0], v[1])
-	}
-	fmt.Println()
+	// // Insert Interval
+	// arr := [][]int{{1,3},{4,5}}
+	// new_arr := []int{2,3}
+	// merged_ans := insertInt(arr, new_arr)
+	// fmt.Println("The merged intervals after inserting are:")
+	// for _, v := range merged_ans {
+	// 	fmt.Printf("[%d, %d]", v[0], v[1])
+	// }
+	// fmt.Println()
+
+	//Meeting Room II
+	arr := [][]int{{0, 30}, {5, 10}, {15, 20}, {30,40}}
+	ans := minRoomsNeeded(arr)
+	fmt.Println("The min roomes needed are: ", ans)
 }
 
 func sortInt(arr [][]int) {
